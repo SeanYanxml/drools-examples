@@ -1,16 +1,15 @@
-*.class
+# filter directories
+/.settings
+/bin
+/target
+/logs
+/out
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.ear
-*.classpath
-*.project
-*.settings
-*.MF
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# filter config files, except .gitignore
+.*
+!.gitignore
+*.iml
+*.exe
+# eclipse ignore
+.project
+.classpath
