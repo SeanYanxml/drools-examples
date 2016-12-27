@@ -1,8 +1,11 @@
 package com.us.demo.money;
 
 import com.us.demo.money.Money;
-function void  printString(int number,String desc){
+function void  printTheMsg(int number,String desc){
 	System.out.println("[Number:"+number+"] [Desc:"+desc+"]");
+}
+function void printString(String string){
+	System.out.println(string);
 }
 
 rule "test1"
@@ -11,7 +14,7 @@ when
 	m:Money(number>0);
 then
 	m.setDesc("number>0");
-	m.toString();
+	printString(m.toString());
 	retract(m);
 	// 是否有ELSE？
 end
@@ -22,7 +25,7 @@ when
 	m:Money(number>10);
 then
 	m.setDesc("number>10");
-	m.toString();
+	printString(m.toString());
 	retract(m);
 end
 
@@ -32,6 +35,6 @@ when
 	m:Money(number>100);
 then
 	m.setDesc("number>100");
-	m.toString();
+	printString(m.toString());
 	retract(m);
 end

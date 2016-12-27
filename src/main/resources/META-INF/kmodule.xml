@@ -10,7 +10,8 @@
 	<kbase name="kabse-age" packages="com.us.demo.age">
 		<ksession name="kession-age"></ksession>
 	</kbase>
-<!-- 	<kbase name="kbase-money" package="com.us.demo.money">
+	<kbase name="kbase-money" packages="com.us.demo.money">
+	<!-- 特别注意这边的packages 千万不能写成package 不然会报错 -->
 		<ksession name="kession-money"></ksession>
-	</kbase> -->
+	</kbase>
 </kmodule>
