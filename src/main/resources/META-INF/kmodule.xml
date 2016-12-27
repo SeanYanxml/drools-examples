@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<kmodule  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://www.drools.org/xsd/kmodule" >
-   <kbase name="HelloWorld" packages="com.us.demo.helloworld">
-     <ksession name="ksession-helloworld"></ksession>
-   </kbase>
+<kmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.drools.org/xsd/kmodule">
+	<!-- name 是kbase的名字 packages 是drl文件的路径 也就是HelloWorld.drl文件的物理路径 是在src/main/test 
+		目录下的 -->
+	<!-- ksession 是ksession的名字 但是此处ksession的名字和 .drl规则文件的名称不是对应的 -->
+	<kbase name="HelloWorld" packages="com.us.demo.helloworld">
+		<ksession name="ksession-helloworld"></ksession>
+	</kbase>
+	<kbase name="kabse-age" packages="com.us.demo.age">
+		<ksession name="kession-age"></ksession>
+	</kbase>
+<!-- 	<kbase name="kbase-money" package="com.us.demo.money">
+		<ksession name="kession-money"></ksession>
+	</kbase> -->
 </kmodule>

@@ -1,0 +1,37 @@
+package com.us.demo.money;
+
+import com.us.demo.money.Money;
+function void  printString(int number,String desc){
+	System.out.println("[Number:"+number+"] [Desc:"+desc+"]");
+}
+
+rule "test1"
+salience 3
+when
+	m:Money(number>0);
+then
+	m.setDesc("number>0");
+	m.toString();
+	retract(m);
+	// 是否有ELSE？
+end
+
+rule "test2"
+salience 4
+when
+	m:Money(number>10);
+then
+	m.setDesc("number>10");
+	m.toString();
+	retract(m);
+end
+
+rule "test3"
+salience 5
+when
+	m:Money(number>100);
+then
+	m.setDesc("number>100");
+	m.toString();
+	retract(m);
+end
