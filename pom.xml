@@ -25,5 +25,25 @@
 			<artifactId>knowledge-api</artifactId>
 			<version>${drools-version}</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.drools</groupId>
+			<artifactId>drools-decisiontables</artifactId>
+			<version>${drools-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.drools</groupId>
+			<artifactId>drools-templates</artifactId>
+			<!--templates 模板 -->
+			<version>${drools-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.kie</groupId>
+			<artifactId>kie-api</artifactId>
+			<version>${drools-version}</version>
+		</dependency>
+
+	<!-- other jars -->
+		
 	</dependencies>
 </project>
