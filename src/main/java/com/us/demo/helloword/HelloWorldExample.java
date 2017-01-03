@@ -1,8 +1,11 @@
 package com.us.demo.helloword;
 
+import java.beans.PropertyChangeSupport;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.drools.core.base.RuleNameMatchesAgendaFilter;
+import org.drools.core.base.RuleNameStartsWithAgendaFilter;
 import org.kie.api.KieServices;
 import org.kie.api.event.rule.DebugAgendaEventListener;
 import org.kie.api.event.rule.DebugRuleRuntimeEventListener;
@@ -21,6 +24,10 @@ public class HelloWorldExample {
 		ksession.setGlobal("list", new ArrayList<Object>());
 		ksession.addEventListener(new DebugAgendaEventListener());
 		ksession.addEventListener(new DebugRuleRuntimeEventListener());
+//		ksession.addEventListener(listener);
+		//PropertyChangeSupport
+//		RuleNameStartsWithAgendaFilter;
+//		RuleNameMatchesAgendaFilter
 		final Message message=new Message();
 		message.setMessage("Hello World");
 		message.setStatus(Message.HELLO);

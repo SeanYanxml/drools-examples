@@ -1,5 +1,7 @@
 package com.us.demo.money;
 
+import org.drools.core.WorkingMemory;
+
 public class Money {
 	private int number;
 	private String desc;
@@ -39,5 +41,6 @@ public class Money {
 	public String toString(){
 		return ("[Number:"+number+" ]  [Desc:"+desc+"]");
 	}
+//	WorkingMemory
 
 }

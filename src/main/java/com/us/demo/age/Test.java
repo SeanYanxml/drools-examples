@@ -12,7 +12,7 @@ public class Test {
 		KieServices kieServices=KieServices.Factory.get();
 		KieContainer kieContainer=kieServices.getKieClasspathContainer();
 		
-		return kieContainer.newKieSession("kession-age");
+		return kieContainer.newKieSession("ksession-age");
 	}
 	
 	public static void run(){
@@ -25,6 +25,7 @@ public class Test {
 		Person p4=new Person("Name27", 27);
 		Person p5=new Person("Name75", 75);
 		
+		// 返回一个 FactHandle对象
 		kieSession.insert(p1);
 		kieSession.insert(p2);
 		kieSession.insert(p3);

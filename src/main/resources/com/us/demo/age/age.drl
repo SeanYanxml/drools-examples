@@ -1,4 +1,4 @@
-package com.us.demo.age.person;
+package com;
 // 类名和文件名称不需要对应  
 
 // 需要的类的所在包 是在src/main/java 目录下的类文件
