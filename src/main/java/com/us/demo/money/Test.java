@@ -35,7 +35,9 @@ public class Test {
 		//kieSession.insert(money2);
 		//kieSession.fireAllRules();
 		//fire 射出 映射执行
-		kieSession.dispose();
+		
+		//kieSession.dispose();
+		
 //		System.out.println("-------dispose----------");
 //		for(int i=0;i<list.size();i++){
 //			System.out.println("List"+i+" Number:"+(Money)(list.get(i)));

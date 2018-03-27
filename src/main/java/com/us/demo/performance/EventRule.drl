@@ -1,0 +1,22 @@
+package com.us.demo.performance;
+
+import com.us.demo.performance.pojo.Event;
+
+global java.util.List list
+
+
+rule "killEvent"
+salience 3
+when 
+	Event(status == 2)
+then
+	list.remove(id);
+end
+
+rule "final"
+salience 1
+when 
+	eval( true )
+then
+	System.out.println("List size "+list.size());
+end

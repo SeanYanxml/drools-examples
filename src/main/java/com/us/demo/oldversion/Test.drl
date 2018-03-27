@@ -1,9 +1,45 @@
 package com.us.demo.oldversion
 
+import com.us.demo.oldversion.Message;
+
+rule "test1"  
+//date-effective "2017-01-04 11:40:59"   
+//date-expires "2017-01-04 11:41:59" 
+//date-expires $time
+salience 1
+when 
+	Message()
+then
+	System.out.println("OK");
+end
+
+rule "test2"  
+//date-effective "2017-01-04 11:40:59"   
+//date-expires "2017-01-04 11:41:59" 
+//date-expires $time
+salience 10 
+when 
+	$message:Message($time:time)
+	// 输出1次
+	//eval( true )
+	// 输出2次
+	//Object()
+then
+	System.out.println("OK");
+	retract($message);
+	//drools.getRule("test0");
+	//printString("ok");
+	//update();
+end
+
+
+/*
 rule "test0"
-//lock-on-active true  
-date-effective "2016-01-03 18:42:59"   
-date-expires "2016-01-03 18:43:59"  
+//lock-on-active true
+// 年份写错了 汗 
+//date-effective "2017-02-05"    
+date-effective "2017-01-04 11:40:59"   
+date-expires "2017-01-04 11:41:59"  
 when 
 	// 输出1次
 	eval( true )
@@ -14,5 +50,5 @@ then
 	//drools.getRule("test0");
 	//printString("ok");
 	//update();
-	
 end
+*/

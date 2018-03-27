@@ -16,9 +16,10 @@ import org.drools.runtime.StatefulKnowledgeSession;
 import org.kie.api.runtime.KieContainer;
 
 public class Test {
-	public static void main(String []args){
+	public static void main(String []args) throws InterruptedException{
 		// 获取knowledgePackage
 		KnowledgeBuilder kbuilder=KnowledgeBuilderFactory.newKnowledgeBuilder();
+		//System.setProperty("drools.dateformat","yyyy-MM-dd");
 		System.setProperty("drools.dateformat","yyyy-MM-dd HH:mm:ss");
 		kbuilder.add(ResourceFactory.newClassPathResource("Test.drl",Test.class), ResourceType.DRL);
 		// 判断是否有错
@@ -38,9 +39,13 @@ public class Test {
 		kbase.addKnowledgePackages(Kpackages);
 		//将kbuilder加载到 statefulSession内部
 		StatefulKnowledgeSession statefulKSession=kbase.newStatefulKnowledgeSession();
-		statefulKSession.insert(new Object());
-		statefulKSession.fireAllRules();
-		statefulKSession.dispose();
+		statefulKSession.insert(new Message("2017-01-04 12:04:00"));
+		while(true){
+			Thread.sleep(3000);
+			statefulKSession.fireAllRules();
+		}
+		//statefulKSession.fireAllRules();
+		//statefulKSession.dispose();
 
 	}
 

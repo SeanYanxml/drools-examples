@@ -12,6 +12,8 @@ function void printString(String string){
 }
 
 rule "test0"
+date-effective
+date-expires
 when 
 	// 输出1次
 	//eval( true )
